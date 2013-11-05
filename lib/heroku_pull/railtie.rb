@@ -1,7 +1,14 @@
 module HerokuPull
   class Railtie < Rails::Railtie
     rake_tasks do
-      require 'heroku_pull/tasks/heroku_pull.rake'
+      namespace :heroku do
+        desc "Pull the Postgres database from Heroku into local server"
+        task :pull do
+          HerokuPull.capture
+          HerokuPull.download
+          HerokuPull.restore
+        end
+      end
     end
   end
 end
