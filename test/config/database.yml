@@ -1,2 +1,2 @@
-development:
+test:
   database: test_db
