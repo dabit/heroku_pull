@@ -1,5 +1,7 @@
 # Heroku::Pull
 
+[![Build Status](https://travis-ci.org/dabit/heroku_pull.png?branch=master)](https://travis-ci.org/dabit/heroku_pull)
+
 Pull the Postgres database from Heroku Rails application into your local server.
 
 ## Works great with
