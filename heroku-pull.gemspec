@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'heroku/pull/version'
+require 'heroku_pull/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "heroku-pull"
+  spec.name          = "heroku_pull"
   spec.version       = Heroku::Pull::VERSION
   spec.authors       = ["David Padilla"]
   spec.email         = ["david@crowdint.com"]
