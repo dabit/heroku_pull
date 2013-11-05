@@ -1,5 +1,6 @@
 require "heroku_pull/version"
 require "heroku_pull/railtie"
+require "yaml"
 
 module HerokuPull
   class << self
@@ -25,12 +26,12 @@ module HerokuPull
     end
 
     def filename
-      "./tmp/heroku-pull.sql"
+      "./tmp/heroku_pull.sql"
     end
 
-    def database
+    def database(config_path = './config/database.yml')
       ENV['RAILS_ENV'] ||= 'development'
-      config   = YAML::load_file('./config/database.yml')
+      config   = YAML::load_file(config_path)
       database = config[ENV['RAILS_ENV']]['database']
     end
   end
