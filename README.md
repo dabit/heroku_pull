@@ -1,12 +1,16 @@
 # Heroku::Pull
 
-TODO: Write a gem description
+Pull the Postgres database from Heroku Rails application into your local server.
+
+## Works great with
+
+[Heroku][1] and [Postgres.app][2]
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'heroku-pull'
+    gem 'heroku_pull', group: :development
 
 And then execute:
 
@@ -18,7 +22,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run
+
+    $ rake heroku:pull
+
+And this should automatically overwrite your local development database
+with a snapshot of the current database of your Heroku app.
 
 ## Contributing
 
@@ -27,3 +36,7 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+
+[1]: http://heroku.com
+[2]: http://postgresapp.com
