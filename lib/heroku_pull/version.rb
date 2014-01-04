@@ -1,5 +1,5 @@
 module Heroku
   module Pull
-    VERSION = "0.0.1"
+    VERSION = "0.0.2"
   end
 end
