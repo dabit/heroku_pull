@@ -5,6 +5,11 @@ class HerokuPullTest < Test::Unit::TestCase
     stub(HerokuPull).puts
   end
 
+  def test_app_name
+    HerokuPull.app_name = "APP_NAME"
+    assert_equal "APP_NAME", HerokuPull.app_name
+  end
+
   def test_capture
     expected_cmd = "heroku pgbackups:capture --expire"
     mock(HerokuPull).system expected_cmd

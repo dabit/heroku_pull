@@ -4,6 +4,8 @@ require "yaml"
 
 module HerokuPull
   class << self
+    attr_accessor :app_name
+
     def capture
       cmd = "heroku pgbackups:capture --expire"
       puts "Capture the database..."
