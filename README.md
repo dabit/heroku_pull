@@ -31,6 +31,13 @@ Run
 And this should automatically overwrite your local development database
 with a snapshot of the current database of your Heroku app.
 
+### Multiple apps
+
+If you have more than one Heroku app for the same repo use the `APP` env variable
+
+    $ APP=my_target_app rake heroku:pull
+
+
 ## Contributing
 
 1. Fork it
